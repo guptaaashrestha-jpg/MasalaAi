@@ -1,5 +1,7 @@
 # 🥘 MasalaAI – Smart Kitchen Chef
 
+🌐 **Live Demo:** https://masalaai-production.up.railway.app
+
 A Flask web app that uses the **Gemini API** (key hidden on server) to generate quick recipes based on the user's available ingredients.
 
 ---
@@ -20,6 +22,7 @@ masalaai/
 ## 🚀 Setup & Run
 
 ### 1. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -28,27 +31,35 @@ pip install -r requirements.txt
 
 **Option A – Edit app.py directly (simple):**
 Open `app.py` and replace:
+
 ```python
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
 ```
+
 with your actual key:
+
 ```python
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIza...your_key...")
 ```
 
 **Option B – Environment variable (recommended for deployment):**
+
 ```bash
 export GEMINI_API_KEY="AIza...your_key..."
 ```
+
 Or on Windows:
+
 ```bash
 set GEMINI_API_KEY=AIza...your_key...
 ```
 
 ### 3. Run the server
+
 ```bash
 python app.py
 ```
+
 Visit: **http://localhost:5000**
 
 ---
@@ -61,6 +72,7 @@ The key is **never exposed** to the browser — all Gemini calls happen server-s
 ---
 
 ## ✨ Features
+
 - 8 cuisine types (Indian, Chinese, Italian, Mexican, Continental, Indo-Chinese, Street Food, Surprise!)
 - Type ingredients manually OR pick from a checklist
 - Select available spices
